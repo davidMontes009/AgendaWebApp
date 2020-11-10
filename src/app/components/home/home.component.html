@@ -1,0 +1,30 @@
+<h1><p>Mi Agenda </p></h1>
+<br><br>
+<div *ngIf="!listContacto">
+    Cargando listado..
+</div>
+
+<div class="card-columns">
+    <div class="card" *ngFor="let api of listContacto">
+        <img src="../../../assets/img/contacto.png" style="width: 200px; height: 200px;" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"> {{api.nombre}} </h5>
+            <p class="card-text"> {{api.telefono}} </p>
+            <p class="card-text"><small class="text-muted"> {{api.direccion}} </small></p>
+            <table>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-warning">Editar </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-warning"> Log </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-warning"> Activar Log </button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
